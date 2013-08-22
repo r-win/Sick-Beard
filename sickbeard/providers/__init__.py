@@ -29,6 +29,7 @@ __all__ = ['ezrss',
            'omgwtfnzbs',
            'nyaatorrents',
            'frozenlayer',
+	   'kat',
            ]
 
 import sickbeard

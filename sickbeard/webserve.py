@@ -1398,6 +1398,8 @@ class ConfigProviders:
                 sickbeard.NYAA = curEnabled
             elif curProvider == 'frozen_layer':
                 sickbeard.FROZENLAYER = curEnabled
+	    elif curProvider == 'kat':
+		sickbeard.KAT = curEnabled
             else:
                 logger.log(u"don't know what "+curProvider+" is, skipping")
 
