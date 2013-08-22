@@ -78,7 +78,7 @@
 		\$("#SubMenu a:contains('Delete')").addClass('btn').html('<span class="ui-icon ui-icon-trash pull-left"></span> Delete </a>');
 		\$("#SubMenu a:contains('Clear History')").addClass('btn confirm').html('<span class="ui-icon ui-icon-trash pull-left"></span> Clear History </a>');
 		\$("#SubMenu a:contains('Trim History')").addClass('btn confirm').html('<span class="ui-icon ui-icon-trash pull-left"></span> Trim History </a>');
-        \$("#SubMenu a[href='/errorlogs/clearerrors']").addClass('btn').html('<span class="ui-icon ui-icon-trash pull-left"></span> Clear Errors </a>');
+        \$("#SubMenu a[href$='/errorlogs/clearerrors']").addClass('btn').html('<span class="ui-icon ui-icon-trash pull-left"></span> Clear Errors </a>');
 		\$("#SubMenu a:contains('Re-scan')").addClass('btn').html('<span class="ui-icon ui-icon-refresh pull-left"></span> Re-scan </a>');
 		\$("#SubMenu a:contains('Backlog Overview')").addClass('btn').html('<span class="ui-icon ui-icon-refresh pull-left"></span> Backlog Overview </a>');
         \$("#SubMenu a[href='/home/updatePLEX/']").addClass('btn').html('<span class="ui-icon ui-icon-refresh pull-left"></span> Update PLEX </a>');
@@ -92,7 +92,10 @@
 		\$("#SubMenu a:contains('Episode Status')").addClass('btn').html('<span class="ui-icon ui-icon-transferthick-e-w pull-left"></span> Episode Status Management </a>');
 		\$("#SubMenu a:contains('Missed Subtitle')").addClass('btn').html('<span class="ui-icon ui-icon-transferthick-e-w pull-left"></span> Missed Subtitles </a>');
 		\$("#SubMenu a[href='/home/addShows/']").addClass('btn').html('<span class="ui-icon ui-icon-video pull-left"></span> Add Show </a>');
+		\$("#SubMenu a:contains('Add Shows')").addClass('btn').html('<span class="ui-icon ui-icon-video pull-left"></span> Add Shows </a>');
 		\$("#SubMenu a:contains('Processing')").addClass('btn').html('<span class="ui-icon ui-icon-folder-open pull-left"></span> Post-Processing </a>');
+		\$("#SubMenu a:contains('Restart')").addClass('btn').html('<span class="ui-icon ui-icon-refresh pull-left"></span> Restart </a>');
+		\$("#SubMenu a:contains('Shutdown')").addClass('btn').html('<span class="ui-icon ui-icon-power pull-left"></span> Shutdown </a>');
 		\$("#SubMenu a:contains('Manage Searches')").addClass('btn').html('<span class="ui-icon ui-icon-search pull-left"></span> Manage Searches </a>');
 		\$("#SubMenu a:contains('Notification')").addClass('btn').html('<span class="ui-icon ui-icon-note pull-left"></span> Notification </a>');
 		\$("#SubMenu a:contains('Update show in XBMC')").addClass('btn').html('<span class="ui-icon ui-icon-refresh pull-left"></span> Update show in XBMC </a>');
