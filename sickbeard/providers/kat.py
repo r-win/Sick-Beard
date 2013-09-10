@@ -299,10 +299,6 @@ class KATCache(tvcache.TVCache):
 #                logger.log(u"Failed to handle magnet url %s, skipping..." % url, logger.DEBUG)
 #                return
             
-        if url and self.provider.urlIsBlacklisted(url):
-            logger.log(u"url %s is blacklisted, skipping..." % url, logger.DEBUG)
-            return
-
         logger.log(u"Adding item from RSS to cache: "+title, logger.DEBUG)
 
         self._addCacheEntry(title, url)
