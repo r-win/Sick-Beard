@@ -30,6 +30,7 @@ import growl
 import prowl
 import notifo
 from . import libnotify
+import pushalot
 import pushover
 import boxcar
 import nma
@@ -52,6 +53,7 @@ growl_notifier = growl.GrowlNotifier()
 prowl_notifier = prowl.ProwlNotifier()
 notifo_notifier = notifo.NotifoNotifier()
 libnotify_notifier = libnotify.LibnotifyNotifier()
+pushalot_notifier = pushalot.PushalotNotifier()
 pushover_notifier = pushover.PushoverNotifier()
 boxcar_notifier = boxcar.BoxcarNotifier()
 nma_notifier = nma.NMA_Notifier()
@@ -71,6 +73,7 @@ notifiers = [
     growl_notifier,
     prowl_notifier,
     notifo_notifier,
+    pushalot_notifier,
     pushover_notifier,
     boxcar_notifier,
     nma_notifier,

@@ -50,7 +50,7 @@ class KATProvider(generic.TorrentProvider):
     def imageName(self):
         return 'kat.png'
       
-    def getQuality(self, item):
+    def getQuality(self, item, anime=False):
         
         #torrent_node = item.getElementsByTagName('torrent')[0]
         #filename_node = torrent_node.getElementsByTagName('title')[0]
@@ -60,7 +60,7 @@ class KATProvider(generic.TorrentProvider):
         # the title
         filename = helpers.get_xml_text(item.getElementsByTagName('title')[0])
 
-        quality = Quality.nameQuality(filename)
+        quality = Quality.nameQuality(filename, anime)
         
         return quality
 

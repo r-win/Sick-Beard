@@ -55,6 +55,13 @@ $(document).ready(function(){
             function (data) { $('#testBoxcar-result').html(data); });
     });
 
+    $('#testPushalot').click(function () {
+        $('#testPushalot-result').html(loading);
+        var pushalot_authorizationtoken = $("pushalot_authorizationtoken").val();
+        $.get(sbRoot + "/home/testPushalot", {'authorizationToken': pushalot_authorizationtoken},
+            function (data) { $('#testPushalot-result').html(data); });
+    });
+
     $('#testPushover').click(function() {
         $('#testPushover-result').html(loading);
         var pushover_userkey = $("#pushover_userkey").val();
