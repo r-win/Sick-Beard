@@ -1492,7 +1492,7 @@ class ConfigNotifications:
                           use_twitter=None, twitter_notify_onsnatch=None, twitter_notify_ondownload=None, twitter_notify_onsubtitledownload=None, 
                           use_notifo=None, notifo_notify_onsnatch=None, notifo_notify_ondownload=None, notifo_notify_onsubtitledownload=None, notifo_username=None, notifo_apisecret=None,
                           use_boxcar=None, boxcar_notify_onsnatch=None, boxcar_notify_ondownload=None, boxcar_notify_onsubtitledownload=None, boxcar_username=None,
-			  use_pushalot=None, pushalot_notify_onsnatch=None, pushalot_notify_ondownload=None, pushalot_authorizationtoken=None,
+			  use_pushalot=None, pushalot_notify_onsnatch=None, pushalot_notify_ondownload=None, pushalot_notify_onsubtitledownload=None, pushalot_authorizationtoken=None,
                           use_pushover=None, pushover_notify_onsnatch=None, pushover_notify_ondownload=None, pushover_notify_onsubtitledownload=None, pushover_userkey=None,
                           use_libnotify=None, libnotify_notify_onsnatch=None, libnotify_notify_ondownload=None, libnotify_notify_onsubtitledownload=None,
                           use_nmj=None, nmj_host=None, nmj_database=None, nmj_mount=None, use_synoindex=None,
@@ -1679,6 +1679,11 @@ class ConfigNotifications:
             pushalot_notify_ondownload = 1
         else:
             pushalot_notify_ondownload = 0
+
+        if pushalot_notify_onsubtitledownload == "on":
+            pushalot_notify_onsubtitledownload = 1
+        else:
+            pushalot_notify_onsubtitledownload = 0
 
         if pushover_notify_onsnatch == "on":
             pushover_notify_onsnatch = 1
