@@ -318,6 +318,7 @@ BOXCAR_PREFIX = None
 USE_PUSHALOT = False
 PUSHALOT_NOTIFY_ONSNATCH = False
 PUSHALOT_NOTIFY_ONDOWNLOAD = False
+PUSHALOT_NOTIFY_ONSUBTITLEDOWNLOAD = False
 PUSHALOT_AUTHORIZATIONTOKEN = None
 
 USE_PUSHOVER = False
@@ -729,6 +730,7 @@ def initialize(consoleLogging=True):
 	USE_PUSHALOT = bool(check_setting_int(CFG, 'Pushalot', 'use_pushalot', 0))
 	PUSHALOT_NOTIFY_ONSNATCH = bool(check_setting_int(CFG, 'Pushalot', 'pushalot_notify_onsnatch', 0))
         PUSHALOT_NOTIFY_ONDOWNLOAD = bool(check_setting_int(CFG, 'Pushalot', 'pushalot_notify_ondownload', 0))
+	PUSHALOT_NOTIFY_ONSUBTITLEDOWNLOAD = bool(check_setting_int(CFG, 'Pushalot', 'pushalot_notify_onsubtitledownload', 0))
         PUSHALOT_AUTHORIZATIONTOKEN = check_setting_str(CFG, 'Pushalot', 'pushalot_authorizationtoken', '')
 
         USE_PUSHOVER = bool(check_setting_int(CFG, 'Pushover', 'use_pushover', 0))
@@ -1421,6 +1423,7 @@ def save_config():
     new_config['Pushalot']['use_pushalot'] = int(USE_PUSHALOT)
     new_config['Pushalot']['pushalot_notify_onsnatch'] = int(PUSHALOT_NOTIFY_ONSNATCH)
     new_config['Pushalot']['pushalot_notify_ondownload'] = int(PUSHALOT_NOTIFY_ONDOWNLOAD)
+    new_config['Pushalot']['pushalot_notify_onsubtitledownload'] = int(PUSHALOT_NOTIFY_ONSUBTITLEDOWNLOAD)
     new_config['Pushalot']['pushalot_authorizationtoken'] = PUSHALOT_AUTHORIZATIONTOKEN
 
     new_config['Pushover'] = {}

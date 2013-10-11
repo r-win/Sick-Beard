@@ -1856,6 +1856,7 @@ class ConfigNotifications:
 	sickbeard.USE_PUSHALOT = use_pushalot
         sickbeard.PUSHALOT_NOTIFY_ONSNATCH = pushalot_notify_onsnatch
         sickbeard.PUSHALOT_NOTIFY_ONDOWNLOAD = pushalot_notify_ondownload
+        sickbeard.PUSHALOT_NOTIFY_ONSUBTITLEDOWNLOAD = pushalot_notify_onsubtitledownload
         sickbeard.PUSHALOT_AUTHORIZATIONTOKEN = pushalot_authorizationtoken
 
         sickbeard.USE_PUSHOVER = use_pushover

@@ -786,6 +786,13 @@
                                 </label>
                             </div>
                             <div class="field-pair">
+                                <input type="checkbox" name="pushalot_notify_onsubtitledownload" id="pushalot_notify_onsubtitledownload" #if $sickbeard.PUSHALOT_NOTIFY_ONSUBTITLEDOWNLOAD then "checked=\"checked\"" else ""# />
+                                <label class="clearfix" for="pushalot_notify_onsubtitledownload">
+                                    <span class="component-title">Notify on Subtitle Download</span>
+                                    <span class="component-desc">Send notification when we finish a subtitle download?</span>
+                                </label>
+                            </div>
+                            <div class="field-pair">
                                 <label class="nocheck clearfix">
                                     <span class="component-title">Pushalot Authorization Token</span>
                                     <input type="text" name="pushalot_authorizationtoken" id="pushalot_authorizationtoken" value="$sickbeard.PUSHALOT_AUTHORIZATIONTOKEN" size="35" />

@@ -44,6 +44,10 @@ class PushalotNotifier:
     def notify_download(self, ep_name):
         if sickbeard.PUSHALOT_NOTIFY_ONDOWNLOAD:
             self._sendPushalot(pushalot_authorizationtoken=None, event=common.notifyStrings[common.NOTIFY_DOWNLOAD], message=ep_name)
+
+    def notify_subtitle_download(self, ep_name, lang, title=common.notifyStrings[common.NOTIFY_SUBTITLE_DOWNLOAD]):
+        if sickbeard.PUSHALOT_NOTIFY_ONSUBTITLEDOWNLOAD:
+            self._sendPushalot(title, ep_name + ": " + lang)
         
     def _sendPushalot(self, pushalot_authorizationtoken=None, event=None, message=None, force=False):
         
@@ -83,5 +87,5 @@ class PushalotNotifier:
         else:
                 logger.log(u"Pushalot notification failed.", logger.ERROR)
                 return False
-                
+
 notifier = PushalotNotifier
